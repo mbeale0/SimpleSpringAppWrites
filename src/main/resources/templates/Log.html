@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Log:</h1>
+    <table class="table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Message</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="message : ${messages}">
+                        <td width="100px" th:text="${message.title}"></td>
+                        <td th:text="${message.userMessage}"></td>
+                    </tr>
+                </tbody>
+            </table>
+</html>
